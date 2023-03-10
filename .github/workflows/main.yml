@@ -19,6 +19,10 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+        
+    - with:
+         cmd: "Docker Desktop.exe"
+         dir: 'C:\Program Files\Docker\Docker'
       
     - run: npm install -g yarn
     - run: yarn install
