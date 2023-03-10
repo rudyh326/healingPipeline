@@ -22,8 +22,7 @@ jobs:
         
     - with:
          cmd: "Docker Desktop.exe"
-         dir: 'C:\Program Files\Docker\Docker'
-      
+         dir: 'C:\Program Files\Docker\Docker' 
     - run: npm install -g yarn
     - run: yarn install
     - run: $env:HOST = 'localhost'; yarn start
