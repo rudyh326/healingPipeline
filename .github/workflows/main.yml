@@ -23,5 +23,5 @@ jobs:
     - run: npm install -g yarn
     - run: yarn install
     - run: 
-        $env:HOST = 'localhost'
+        $env:HOST = 'localhost',
         yarn start
