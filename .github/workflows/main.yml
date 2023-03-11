@@ -22,13 +22,15 @@ jobs:
         
     - run: |
         cd "C:\Program Files\Docker\Docker"
-        "Docker Desktop.exe"   
+        "Docker Desktop.exe" 
+        
+    - run: |
+        cd "C:\Users\User\Desktop\Deuxieme CCE\Sem2\Applications Distribuees\SeleniumHeal_static"
+        mvn test -Dtest=Healing
 
     - run: npm install -g yarn
     - run: yarn install
     - run: |
         $env:HOST = 'localhost'
         yarn start
-    - run: |
-        cd "C:\Users\User\Desktop\Deuxieme CCE\Sem2\Applications Distribuees\SeleniumHeal_static"
-        mvn test -Dtest=Healing
+
