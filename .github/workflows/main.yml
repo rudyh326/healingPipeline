@@ -9,21 +9,8 @@ jobs:
 
     runs-on: self-hosted
 
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        
-    - run: |
-        cd "C:\Program Files\Docker\Docker"
-        "Docker Desktop.exe" 
-    
     - name: Set up JDK 11
       uses: actions/setup-java@v3
       with:
@@ -36,9 +23,4 @@ jobs:
         cd "C:\Program Files\FYP_Test\SeleniumHeal_SPA"
         mvn -B package --file pom.xml
 
-    - run: npm install -g yarn
-    - run: yarn install
-    - run: |
-        $env:HOST = 'localhost'
-        yarn start
 
