@@ -24,9 +24,8 @@ jobs:
         cd "C:\Program Files\Docker\Docker"
         "Docker Desktop.exe" 
         
-    - run: |
-        cd "C:\Users\User\Desktop\Deuxieme CCE\Sem2\Applications Distribuees\SeleniumHeal_static"
-        mvn test -Dtest=Healing
+    - run: cd "C:\Users\User\Desktop\Deuxieme CCE\Sem2\Applications Distribuees\SeleniumHeal_static"
+    - run: mvn test -Dtest=Healing
 
     - run: npm install -g yarn
     - run: yarn install
