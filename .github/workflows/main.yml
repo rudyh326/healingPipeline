@@ -28,6 +28,7 @@ jobs:
     
     - run: |
         cd "C:\Program Files\FYP_Test\SeleniumHeal_SPA"
+        mvn -B package --file pom.xml
         mvn test -Dtest=Healing
 
     - run: npm install -g yarn
