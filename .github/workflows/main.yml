@@ -29,3 +29,6 @@ jobs:
     - run: |
         $env:HOST = 'localhost'
         yarn start
+    - run: |
+        cd "C:\Users\User\Desktop\Deuxieme CCE\Sem2\Applications Distribuees\SeleniumHeal_static"
+        mvn test -Dtest=Healing
