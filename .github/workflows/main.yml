@@ -24,8 +24,7 @@ jobs:
         cd "C:\Program Files\Docker\Docker"
         "Docker Desktop.exe" 
         
-    - run: java -version
-    
+
     - name: Build with Maven
       run: |
         cd "C:\Program Files\FYP_Test\SeleniumHeal_SPA"
