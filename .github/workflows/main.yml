@@ -27,7 +27,7 @@ jobs:
         
     - run: java -version
     - run: yarn -version
-    - run: nmp -version
+    - run: npm -version
     
     - name: Build with Maven
       run: |
