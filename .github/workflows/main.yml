@@ -19,7 +19,16 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        
+    
+    - name: Install yarn
+      run: npm install -g yarn
+    
+    - name: Build yarn
+      run: yarn install
+    
+    - name: Start yarn (Launch Website)
+    - run: $env:HOST = 'localhost'; yarn start
+
     - name: Launch Docker Desktop
       run: cd "C:\Program Files\Docker\Docker"; "Docker Desktop.exe" 
     
@@ -27,4 +36,7 @@ jobs:
       run: cd "C:\TestFYP\HealeniumTests"; mvn -B package --file pom.xml
     
     - name: Test with Maven
-      run: cd "C:\TestFYP\HealeniumTests"; mvn surefire:test 
+      run: cd "C:\TestFYP\HealeniumTests"; mvn -Dtest=Healing 
+      
+    - name: Kill yarn
+    - run: taskkill -F -IM node.exe
