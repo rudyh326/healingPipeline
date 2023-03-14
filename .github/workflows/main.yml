@@ -12,8 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - run: npm install -g yarn
-    - run: yarn install
     - run: |
         $env:HOST = 'localhost'
         yarn start
