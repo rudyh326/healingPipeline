@@ -49,7 +49,7 @@ jobs:
   maven:
   
     name: Maven 
-    needs: start_yarn
+    needs: build_yarn
     runs-on: self-hosted
     
     steps:
