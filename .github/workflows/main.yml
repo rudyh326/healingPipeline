@@ -5,8 +5,9 @@ on:
     branches: [ "master" ]
     
 jobs:
-  build:
+  yarn:
 
+    name: Yarn
     runs-on: self-hosted
 
     strategy:
@@ -28,10 +29,22 @@ jobs:
     
     - name: Start yarn (Launch Website)
       run: $env:HOST = 'localhost'; yarn start
+      
+  docker:
 
+    name: Docker Desktop
+    runs-on: self-hosted
+    
+    steps:
     - name: Launch Docker Desktop
       run: cd "C:\Program Files\Docker\Docker"; "Docker Desktop.exe" 
     
+  maven:
+  
+    name: Maven
+    runs-on: self-hosted
+    
+    steps:
     - name: Build with Maven
       run: cd "C:\TestFYP\HealeniumTests"; mvn -B package --file pom.xml
     
