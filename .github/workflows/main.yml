@@ -30,6 +30,7 @@ jobs:
   start_yarn:
 
     name: Starting Yarn
+    needs: build_yarn
     runs-on: self-hosted
     
     steps:
