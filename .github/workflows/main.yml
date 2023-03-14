@@ -5,9 +5,9 @@ on:
     branches: [ "master" ]
     
 jobs:
-  yarn1:
+  build_yarn:
 
-    name: Yarn
+    name: Building Yarn
     runs-on: self-hosted
 
     strategy:
@@ -27,12 +27,19 @@ jobs:
     - name: Build yarn
       run: yarn install
     
+    
+  start_yarn:
+
+    name: Starting Yarn
+    runs-on: self-hosted
+    
+    steps:
     - name: Start yarn (Launch Website)
       run: $env:HOST = 'localhost'; yarn start
       
-  docker:
+  docker_start:
 
-    name: Docker Desktop
+    name: Launching Docker Desktop
     runs-on: self-hosted
     
     steps:
@@ -42,7 +49,7 @@ jobs:
   maven:
   
     name: Maven 
-    needs: yarn1
+    needs: start_yarn
     runs-on: self-hosted
     
     steps:
