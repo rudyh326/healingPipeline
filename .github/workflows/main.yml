@@ -9,31 +9,16 @@ jobs:
 
     runs-on: self-hosted
 
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        
-    - name: Launch Docker Desktop
-      run: |
-        cd "C:\Program Files\Docker\Docker"
-        "Docker Desktop.exe" 
-        
-    - run: java -version
-    - run: yarn -version
-    - run: npm -version
     
-    - name: Build with Maven
-      run: |
-        cd "C:\TestFYP\HealeniumTests"
-        mvn -B package --file pom.xml
-        mvn test -Dtest=Healing
+    - run: npm install -g yarn
+    - run: yarn install
+    - run: |
+        $env:HOST = 'localhost'
+        yarn start
+
+
 
 
 
