@@ -29,7 +29,7 @@ jobs:
     - name: Build with Maven
       run: |
         cd "C:\TestFYP\HealeniumTests"
-        run: mvn -B package --file pom.xml
+        mvn -B package --file pom.xml
         mvn test -Dtest=Healing
 
 
