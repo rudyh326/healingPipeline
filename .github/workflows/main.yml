@@ -5,7 +5,7 @@ on:
     branches: [ "master" ]
     
 jobs:
-  yarn:
+  yarn1:
 
     name: Yarn
     runs-on: self-hosted
@@ -42,7 +42,7 @@ jobs:
   maven:
   
     name: Maven 
-    needs: yarn
+    needs: yarn1
     runs-on: self-hosted
     
     steps:
