@@ -13,6 +13,8 @@ jobs:
     
     - run: |
         cd "C:\TestFYP\ReactAppYarn\confusion"
+        npm install -g yarn
+        yarn install
         $env:HOST = 'localhost'
         yarn start
 
