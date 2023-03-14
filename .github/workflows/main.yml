@@ -27,4 +27,4 @@ jobs:
       run: cd "C:\TestFYP\HealeniumTests"; mvn -B package --file pom.xml
     
     - name: Test with Maven
-      run: mvn test -Dtest=Healing surefire:test
+      run: cd "C:\TestFYP\HealeniumTests"; mvn clean test -Dtest=Healing
