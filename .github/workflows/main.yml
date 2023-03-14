@@ -20,11 +20,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         
-    - run: |
+    - name: Launch Docker Desktop
+      run: |
         cd "C:\Program Files\Docker\Docker"
         "Docker Desktop.exe" 
         
     - run: java -version
+    - run: yarn -version
+    - run: nmp -version
     
     - name: Build with Maven
       run: |
