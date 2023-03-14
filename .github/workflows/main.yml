@@ -30,10 +30,7 @@ jobs:
       run: |
         cd "C:\TestFYP\HealeniumTests"
         mvn -B package --file pom.xml
+        mvn test -Dtest=Healing
 
-    - run: npm install -g yarn
-    - run: yarn install
-    - run: |
-        $env:HOST = 'localhost'
-        yarn start
+
 
