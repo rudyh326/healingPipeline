@@ -41,7 +41,8 @@ jobs:
     
   maven:
   
-    name: Maven
+    name: Maven 
+    needs: yarn
     runs-on: self-hosted
     
     steps:
