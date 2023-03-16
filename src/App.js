@@ -35,8 +35,8 @@ const App = () => {
             
             <div className='search'>
                 <input
-                  id="searchinginput" 
-                  placeholder='Search'
+                  id="searchinput" 
+                  placeholder='Search for movies'
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)} 
                 />
