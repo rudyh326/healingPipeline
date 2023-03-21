@@ -21,7 +21,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
         
     - name: Launch Docker Desktop
-      run: cd "C:\Program Files\Docker\Docker"; .\"Docker Desktop.exe"
+      run: |
+        cd "C:\Program Files\Docker\Docker" 
+        .\"Docker Desktop.exe"
       
     - name: Install yarn
       run: npm install -g yarn
