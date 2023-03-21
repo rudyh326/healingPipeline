@@ -36,7 +36,7 @@ jobs:
       run: cd "C:\TestFYP\HealeniumTests"; mvn -B package --file pom.xml
     
     - name: Test with Maven
-      run: cd "C:\TestFYP\HealeniumTests"; mvn clean test -Dtest=Healing 
+      run: cd "C:\TestFYP\HealeniumTests"; mvn test -Dtest=Healing 
       
     - name: Kill yarn
       run: taskkill -F -IM node.exe
