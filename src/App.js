@@ -40,19 +40,17 @@ const App = () => {
                   )
             }
 
-            <div className='search'>
-                <input
-                  placeholder='Find'
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)} 
-                />
-                <img
-                  id="searchicon"
-                  src={SearchIcon}
-                  alt="search"
-                  onClick={() => searchMovies(searchTerm)}
-                />
-            </div>
+            <input
+              placeholder='Find'
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)} 
+            />
+            <img
+              id="searchicon"
+              src={SearchIcon}
+              alt="search"
+              onClick={() => searchMovies(searchTerm)}
+            />
 
         </div>
 
