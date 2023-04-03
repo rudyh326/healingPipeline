@@ -9,6 +9,7 @@ const API_URL = "http://www.omdbapi.com?apikey=9118604";
 const App = () => {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
+    const [searchWeb, setSearchWeb] = useState('');
 
     const searchMovies = async (title) => {
         const response = await fetch(`${API_URL}&s=${title}`);
@@ -63,8 +64,8 @@ const App = () => {
                   onClick={() => searchMovies(searchTerm)}
                 />
 
-                <h2 style={{ color: 'green' }}>Open a new website</h2>
-                
+                <h3 style={{ color: 'green' }}>Open a new website</h3>
+
                 <input
                   value={searchWeb}
                   placeholder='Navigate to'
