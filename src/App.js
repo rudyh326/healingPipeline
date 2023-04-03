@@ -31,15 +31,15 @@ const App = () => {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)} 
                 />
-                {/* <img
+                <img
                   id="searchicon"
                   src={SearchIcon}
                   alt="search"
                   onClick={() => searchMovies(searchTerm)}
-                /> */}
-                <button id='searchicon' onClick={() => searchMovies(searchTerm)}>
+                />
+                {/* <button id='searchicon' onClick={() => searchMovies(searchTerm)}>
                     <img src={SearchIcon} alt="search" />
-                </button>
+                </button> */}
 
             </div>
 
