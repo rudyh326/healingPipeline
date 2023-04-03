@@ -48,7 +48,6 @@ const App = () => {
 
                 <input
                   value={searchTerm}
-                  placeholder='Find'
                   onChange={(e) => setSearchTerm(e.target.value)} 
                 />
                 
