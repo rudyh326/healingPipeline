@@ -37,7 +37,7 @@ const App = () => {
                   alt="search"
                   onClick={() => searchMovies(searchTerm)}
                 /> */}
-                <button id='searchicon' onClick={() => searchMovies(searchTerm)}>
+                <button onClick={() => searchMovies(searchTerm)}>
                     <img src={SearchIcon} alt="search" />
                 </button>
 
