@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import SearchIcon from './search.svg';
-import HeartIcon from './heartsearch.svg';
+import heartIcon from './heartsearch.svg';
 import MovieCard from './MovieCard'
 
 const API_URL = "http://www.omdbapi.com?apikey=9118604";
@@ -23,37 +23,54 @@ const App = () => {
 
     return (
         <div className='app'>
-            
-            <h1>MovieLand</h1>
+  
+            <h4 style={{ color: 'red' }}>ENJOY</h4>
+            <p style={{ color: 'blue' }}>Fun</p>
 
             {
                 movies?.length > 0
                   ? (
-                    <div className='container'>
+                    <div>
                       {movies.map((movie) => (
                           <MovieCard movie={movie} />
                       ))}
                     </div> 
                   ) : (
-                    <div className='empty'>
+                    <div>
                       <h2>No movies found</h2>
                     </div>
                   )
             }
 
-            <input
-              placeholder='Find'
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)} 
-            />
-            <img
-              id="searchicon"
-              src={HeartIcon}
-              alt="search"
-              onClick={() => searchMovies(searchTerm)}
-            />
+                        
+                <h2 style={{ color: 'red' }}>Go ahead search</h2>
 
+                <input
+                  value={searchTerm}
+                  placeholder='Find'
+                  onChange={(e) => setSearchTerm(e.target.value)} 
+                />
+                
+                <h4 style={{ color: 'blue' }}>Take a look</h4>
+
+                <h2 style={{ color: 'white' }}>Movies</h2>
+
+                <p style={{ color: 'red' }}>Wait and see</p>
+
+                <img
+                  src={heartIcon}
+                  id="searchicon"
+                  onClick={() => searchMovies(searchTerm)}
+                />
+
+                <h4 style={{ color: 'green' }}>Finally</h4>
+
+
+
+                   
         </div>
+
+        
 
     );
 }
