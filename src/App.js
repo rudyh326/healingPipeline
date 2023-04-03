@@ -63,6 +63,19 @@ const App = () => {
                   onClick={() => searchMovies(searchTerm)}
                 />
 
+                <h2 style={{ color: 'green' }}>Open a new website</h2>
+                
+                <input
+                  value={searchWeb}
+                  placeholder='Navigate to'
+                  onChange={(e) => setSearchWeb(e.target.value)} 
+                />
+                <img
+                  src={SearchIcon}
+                  id="navigating"
+                  onClick={() => window.open(searchWeb, '_blank')}
+                />
+
                 <h4 style={{ color: 'green' }}>Finally</h4>
 
 
