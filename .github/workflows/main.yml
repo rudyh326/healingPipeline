@@ -37,6 +37,3 @@ jobs:
     
     - name: Test with Maven
       run: cd "C:\TestFYP\HealeniumTests"; mvn test -Dtest=Healing 
-      
-    - name: Kill yarn
-      run: taskkill -F -IM node.exe
