@@ -65,16 +65,18 @@ const App = () => {
 
                 <h3 style={{ color: 'green' }}>Open a new website</h3>
 
-                <input
-                  value={searchWeb}
-                  placeholder='Navigate to'
-                  onChange={(e) => setSearchWeb(e.target.value)} 
-                />
-                <img
-                  src={SearchIcon}
-                  id="navigating"
-                  onClick={() => window.open(searchWeb, '_blank')}
-                />
+                <div>
+                  <input
+                    value={searchWeb}
+                    placeholder='Navigate to'
+                    onChange={(e) => setSearchWeb(e.target.value)} 
+                  />
+                  <img
+                    src={SearchIcon}
+                    id="navigating"
+                    onClick={() => window.open(searchWeb, '_blank')}
+                  />
+                </div>
 
                 <h4 style={{ color: 'green' }}>Finally</h4>
 
