@@ -24,20 +24,6 @@ const App = () => {
         <div className='app'>
             
             <h1>MovieLand</h1>
-            
-            <div className='search'>
-                <input
-                  placeholder='Find'
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)} 
-                />
-                <img
-                  id="searchicon"
-                  src={SearchIcon}
-                  alt="search"
-                  onClick={() => searchMovies(searchTerm)}
-                />
-            </div>
 
             {
                 movies?.length > 0
@@ -52,7 +38,22 @@ const App = () => {
                       <h2>No movies found</h2>
                     </div>
                   )
-            }        
+            }
+
+            <div className='search'>
+                <input
+                  placeholder='Find'
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)} 
+                />
+                <img
+                  id="searchicon"
+                  src={SearchIcon}
+                  alt="search"
+                  onClick={() => searchMovies(searchTerm)}
+                />
+            </div>
+
         </div>
 
     );
