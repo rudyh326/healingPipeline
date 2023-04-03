@@ -32,7 +32,6 @@ const App = () => {
                   onChange={(e) => setSearchTerm(e.target.value)} 
                 />
                 <img
-                  id="searchicon"
                   src={SearchIcon}
                   alt="search"
                   onClick={() => searchMovies(searchTerm)}
